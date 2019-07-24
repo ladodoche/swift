@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yir-ZZ-arn">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -332,8 +332,125 @@
             </objects>
             <point key="canvasLocation" x="2013.0434782608697" y="-331.47321428571428"/>
         </scene>
+        <!--Home-->
+        <scene sceneID="xLf-W0-Vgf">
+            <objects>
+                <viewController id="yir-ZZ-arn" customClass="Home" customModule="BeTouriste" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="85h-cJ-BJw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Gcy-uA-nMj">
+                                <rect key="frame" x="0.0" y="44" width="414" height="76"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="LZr-zN-DMo"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Find"/>
+                                    <segment title="Share"/>
+                                </segments>
+                                <connections>
+                                    <action selector="toggleWithSender:" destination="yir-ZZ-arn" eventType="valueChanged" id="uSt-Xp-Ayb"/>
+                                </connections>
+                            </segmentedControl>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ea8-LH-p93">
+                                <rect key="frame" x="0.0" y="119" width="414" height="777"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="Vbk-Bo-yty" kind="embed" id="q7t-7Z-sZT"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LnN-GU-3ER">
+                                <rect key="frame" x="0.0" y="119" width="414" height="777"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="yZg-MM-zhV" kind="embed" id="VXh-GJ-uUB"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sUP-gv-RW7" firstAttribute="trailing" secondItem="Gcy-uA-nMj" secondAttribute="trailing" id="4d6-64-YSS"/>
+                            <constraint firstItem="Gcy-uA-nMj" firstAttribute="top" secondItem="sUP-gv-RW7" secondAttribute="top" id="cDY-WK-VFO"/>
+                            <constraint firstItem="Gcy-uA-nMj" firstAttribute="leading" secondItem="sUP-gv-RW7" secondAttribute="leading" id="i1j-qd-bEf"/>
+                            <constraint firstItem="Gcy-uA-nMj" firstAttribute="centerX" secondItem="85h-cJ-BJw" secondAttribute="centerX" id="iUW-qJ-IyZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sUP-gv-RW7"/>
+                    </view>
+                    <connections>
+                        <outlet property="v1" destination="LnN-GU-3ER" id="m7j-Ca-xrb"/>
+                        <outlet property="v2" destination="ea8-LH-p93" id="T5k-bY-q0a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wpW-Hi-3Sy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2000.0000000000002" y="522.99107142857144"/>
+        </scene>
+        <!--Home Share Controller-->
+        <scene sceneID="NDs-hO-gr2">
+            <objects>
+                <viewController id="Vbk-Bo-yty" customClass="HomeShareController" customModule="BeTouriste" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="02W-A7-6jM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="777"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gE4-oZ-i3A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2701" y="1172"/>
+        </scene>
+        <!--Home Find Controller-->
+        <scene sceneID="HQC-qK-i9b">
+            <objects>
+                <viewController id="yZg-MM-zhV" customClass="HomeFindController" customModule="BeTouriste" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hDs-iU-1mO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="777"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ucd-qQ-sLZ">
+                                <rect key="frame" x="0.0" y="0.0" width="214" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OZE-RF-O4n">
+                                <rect key="frame" x="240" y="7" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="57B-Pp-Dz0">
+                                <rect key="frame" x="329" y="7" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0rW-vg-aG7">
+                                <rect key="frame" x="0.0" y="730" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Item" id="oJa-Ri-KSk"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="6qm-SA-Xst"/>
+                                    <barButtonItem title="Item" id="C6G-Gr-CP0"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="oqy-gL-DM8"/>
+                                    <barButtonItem title="Item" id="6X5-Bh-9Dq"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="xIq-bT-BTV"/>
+                                    <barButtonItem title="Item" id="lHb-dM-MlL"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="QbN-OX-Vib"/>
+                                    <barButtonItem title="Item" id="jnQ-uI-98l"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5vs-6A-ytx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1254" y="1172"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Home.jpg" width="491.51998901367188" height="655.67999267578125"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="rA2-Kl-S1k"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeFindController" customModule="BeTouriste" customModuleProvider="target">
+            <connections>
+                <outlet property="bAll" destination="8LF-SJ-GtJ" id="NNz-FF-i2m"/>
+                <outlet property="bBar" destination="oPx-t9-gca" id="8Zy-yW-djF"/>
+                <outlet property="bLoc" destination="HbY-Ti-UaG" id="PKO-2W-G8i"/>
+                <outlet property="bMonument" destination="9ox-41-DNM" id="Cjd-Ny-wWC"/>
+                <outlet property="bResearch" destination="6Ik-Z5-FDv" id="1r1-AF-9Kt"/>
+                <outlet property="bRestaurant" destination="efN-6F-F44" id="xtV-MD-3xM"/>
+                <outlet property="lCancel" destination="RmO-i9-915" id="z49-Lq-Cg2"/>
+                <outlet property="searchBar" destination="bFb-lC-FuQ" id="wD8-u8-gGv"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HDL-1r-0wQ">
+                    <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                    <items>
+                        <barButtonItem title="Localisation" id="HbY-Ti-UaG">
+                            <connections>
+                                <action selector="clickOnLocWithSender:" destination="-1" id="4cM-gq-rUd"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="Q9h-Re-Ssu"/>
+                        <barButtonItem title="Restaurant" id="efN-6F-F44">
+                            <connections>
+                                <action selector="clickOnRestaurantWithSender:" destination="-1" id="Zlq-JD-82N"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="xhf-ES-ZQU"/>
+                        <barButtonItem title="Monument" id="9ox-41-DNM">
+                            <connections>
+                                <action selector="clickOnMonumentWithSender:" destination="-1" id="F1J-Fm-38H"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="yl6-Gc-xlo"/>
+                        <barButtonItem title="Bar" id="oPx-t9-gca">
+                            <connections>
+                                <action selector="clickOnBarWithSender:" destination="-1" id="aGb-7L-BQE"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="BJy-Le-6sB"/>
+                        <barButtonItem title="All" id="8LF-SJ-GtJ">
+                            <connections>
+                                <action selector="clickOnAllWithSender:" destination="-1" id="noa-ah-zGz"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+                <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bFb-lC-FuQ">
+                    <rect key="frame" x="0.0" y="44" width="210" height="56"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ik-Z5-FDv">
+                    <rect key="frame" x="234" y="66" width="64" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Research"/>
+                    <connections>
+                        <action selector="clickOnResearchWithSender:" destination="-1" eventType="touchUpInside" id="ays-uQ-U4q"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RmO-i9-915">
+                    <rect key="frame" x="328" y="66" width="48" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Cancel"/>
+                    <connections>
+                        <action selector="clickOnCancelWithSender:" destination="-1" eventType="touchUpInside" id="Nz8-P5-fjJ"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="HDL-1r-0wQ" secondAttribute="bottom" id="2Tw-l4-Xpa"/>
+                <constraint firstItem="HDL-1r-0wQ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="PkV-zt-Hjq"/>
+                <constraint firstItem="HDL-1r-0wQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Q2W-yU-T4U"/>
+                <constraint firstAttribute="trailing" secondItem="HDL-1r-0wQ" secondAttribute="trailing" id="ftb-Lf-YbI"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="47.826086956521742" y="35.491071428571423"/>
+        </view>
+    </objects>
+</document>
